@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Shooter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="container">
+    <canvas id="gameCanvas" width="960" height="600"></canvas>
+
+    <!-- Menu Screen -->
+    <div id="menu-screen" class="screen">
+      <div class="screen-content">
+        <h1>RETRO SHOOTER</h1>
+        <p>Use Arrow Keys to Move</p>
+        <p>Click to Shoot</p>
+        <button id="start-button" class="btn">START</button>
+      </div>
+    </div>
+
+    <!-- HUD (during gameplay) -->
+    <div id="hud" class="screen hidden">
+      <div class="hud-top">
+        <div class="hud-left">
+          <p>Health: <span id="health-value">100</span>/100</p>
+        </div>
+        <div class="hud-center">
+          <p id="level-info">Level 1 - Wave 1/2</p>
+        </div>
+        <div class="hud-right">
+          <p>Score: <span id="score-value">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pause Screen -->
+    <div id="pause-screen" class="screen hidden">
+      <div class="screen-content">
+        <h2>PAUSED</h2>
+        <button id="resume-button" class="btn">RESUME</button>
+        <button id="restart-button" class="btn">RESTART</button>
+        <button id="menu-button" class="btn">MENU</button>
+      </div>
+    </div>
+
+    <!-- Level Complete Screen -->
+    <div id="level-complete-screen" class="screen hidden">
+      <div class="screen-content">
+        <h2>LEVEL COMPLETE</h2>
+        <p>Score: <span id="level-complete-score">0</span></p>
+        <button id="next-level-button" class="btn">CONTINUE</button>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+      <div class="screen-content">
+        <h2>GAME OVER</h2>
+        <p>Final Score: <span id="game-over-score">0</span></p>
+        <button id="restart-game-button" class="btn">RESTART</button>
+        <button id="menu-game-button" class="btn">MENU</button>
+      </div>
+    </div>
+
+    <!-- Victory Screen -->
+    <div id="victory-screen" class="screen hidden">
+      <div class="screen-content">
+        <h2>VICTORY!</h2>
+        <p>Final Score: <span id="victory-score">0</span></p>
+        <button id="restart-victory-button" class="btn">RESTART</button>
+        <button id="menu-victory-button" class="btn">MENU</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/bullet.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/enemy.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
